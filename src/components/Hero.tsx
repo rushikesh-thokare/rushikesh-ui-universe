@@ -1,6 +1,6 @@
 import { Download } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import profilePhoto from "@/assets/profile-photo.jpg";
+const profilePhoto = "/lovable-uploads/d786c9ba-857a-43e1-bab9-088b677731f7.png";
 
 const Hero = () => {
   return (
@@ -36,17 +36,18 @@ const Hero = () => {
 
           {/* Right Content - Profile Image */}
           <div className="flex justify-center lg:justify-end">
-            <div className="relative">
-              <div className="w-80 h-80 rounded-full neon-glow overflow-hidden border-4 border-primary/30">
+            <div className="relative animate-float">
+              <div className="w-80 h-80 rounded-full neon-glow overflow-hidden border-4 border-primary/30 hover:scale-105 transition-all duration-500 hover:rotate-3">
                 <img 
                   src={profilePhoto} 
                   alt="Rushikesh Thokare" 
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover hover:scale-110 transition-transform duration-500"
                 />
               </div>
-              {/* Floating rings */}
+              {/* Floating rings with enhanced animation */}
               <div className="absolute -inset-4 rounded-full border-2 border-primary/20 animate-pulse"></div>
               <div className="absolute -inset-8 rounded-full border border-primary/10 animate-ping"></div>
+              <div className="absolute -inset-12 rounded-full border border-neon-pink/10 animate-pulse" style={{ animationDelay: '1s' }}></div>
             </div>
           </div>
         </div>
