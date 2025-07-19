@@ -41,18 +41,24 @@ const About = () => {
             </p>
           </div>
 
-          <div className="mt-8 grid grid-cols-2 md:grid-cols-3 gap-4 text-center">
-            <div className="glass-card p-4 rounded-lg">
-              <h3 className="text-2xl font-bold text-primary">2026</h3>
-              <p className="text-sm text-muted-foreground">Expected Graduation</p>
+          <div className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="about-card group">
+              <div className="about-card-inner">
+                <h3 className="text-3xl font-bold gradient-text mb-2">2026</h3>
+                <p className="text-muted-foreground">Expected Graduation</p>
+              </div>
             </div>
-            <div className="glass-card p-4 rounded-lg">
-              <h3 className="text-2xl font-bold text-primary">BCA</h3>
-              <p className="text-sm text-muted-foreground">Current Degree</p>
+            <div className="about-card group" style={{ animationDelay: '0.2s' }}>
+              <div className="about-card-inner">
+                <h3 className="text-3xl font-bold gradient-text mb-2">BCA</h3>
+                <p className="text-muted-foreground">Current Degree</p>
+              </div>
             </div>
-            <div className="glass-card p-4 rounded-lg col-span-2 md:col-span-1">
-              <h3 className="text-2xl font-bold text-primary">Pune</h3>
-              <p className="text-sm text-muted-foreground">Location</p>
+            <div className="about-card group" style={{ animationDelay: '0.4s' }}>
+              <div className="about-card-inner">
+                <h3 className="text-3xl font-bold gradient-text mb-2">Pune</h3>
+                <p className="text-muted-foreground">Location</p>
+              </div>
             </div>
           </div>
         </div>
