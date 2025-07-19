@@ -61,7 +61,22 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
+				},
+				neon: {
+					purple: 'hsl(var(--neon-purple))',
+					pink: 'hsl(var(--neon-pink))',
+					blue: 'hsl(var(--neon-blue))'
 				}
+			},
+			backgroundImage: {
+				'gradient-main': 'var(--gradient-bg)',
+				'gradient-card': 'var(--gradient-card)',
+				'gradient-neon': 'var(--gradient-neon)'
+			},
+			boxShadow: {
+				'neon': 'var(--glow-purple)',
+				'neon-pink': 'var(--glow-pink)',
+				'card': 'var(--shadow-card)'
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
