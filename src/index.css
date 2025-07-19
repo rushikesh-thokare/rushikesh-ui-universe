@@ -158,12 +158,92 @@ All colors MUST be HSL.
     animation: float 6s ease-in-out infinite;
   }
   
+  .tech-grid {
+    background-image: 
+      linear-gradient(rgba(139, 92, 246, 0.1) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(139, 92, 246, 0.1) 1px, transparent 1px);
+    background-size: 50px 50px;
+    background-position: 0 0, 0 0;
+    animation: grid-move 20s linear infinite;
+  }
+  
+  .animate-spin-slow {
+    animation: spin 8s linear infinite;
+  }
+  
+  .animate-pulse-glow {
+    animation: pulse-glow 3s ease-in-out infinite;
+  }
+  
+  .animate-pulse-soft {
+    animation: pulse-soft 4s ease-in-out infinite;
+  }
+  
+  .animate-orbit {
+    animation: orbit 6s linear infinite;
+  }
+  
+  .animate-orbit-reverse {
+    animation: orbit-reverse 8s linear infinite;
+  }
+  
+  .bg-gradient-radial {
+    background: radial-gradient(circle, var(--tw-gradient-stops));
+  }
+  
   @keyframes float {
     0%, 100% {
       transform: translateY(0px);
     }
     50% {
       transform: translateY(-20px);
+    }
+  }
+  
+  @keyframes grid-move {
+    0% {
+      background-position: 0 0, 0 0;
+    }
+    100% {
+      background-position: 50px 50px, 50px 50px;
+    }
+  }
+  
+  @keyframes pulse-glow {
+    0%, 100% {
+      opacity: 0.4;
+      transform: scale(1);
+    }
+    50% {
+      opacity: 0.8;
+      transform: scale(1.05);
+    }
+  }
+  
+  @keyframes pulse-soft {
+    0%, 100% {
+      opacity: 0.3;
+    }
+    50% {
+      opacity: 0.7;
+    }
+  }
+  
+  @keyframes orbit {
+    0% {
+      transform: rotate(0deg) translateX(100px) rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg) translateX(100px) rotate(-360deg);
+    }
+  }
+  
+  @keyframes orbit-reverse {
+    0% {
+      transform: rotate(0deg) translateX(80px) rotate(0deg);
+    }
+    100% {
+      transform: rotate(-360deg) translateX(80px) rotate(360deg);
     }
   }
 }
