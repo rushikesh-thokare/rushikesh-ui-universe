@@ -491,6 +491,85 @@ All colors MUST be HSL.
     transition: transform 0.1s ease-out;
   }
   
+  /* Timeline Layout Styles */
+  .timeline-dot {
+    width: 12px;
+    height: 12px;
+    background: hsl(var(--primary));
+    border-radius: 50%;
+    box-shadow: 
+      0 0 0 4px hsl(var(--background)),
+      0 0 0 6px hsl(var(--primary) / 0.3),
+      0 0 20px hsl(var(--primary) / 0.5);
+    animation: pulse-dot 2s ease-in-out infinite;
+  }
+  
+  .timeline-line {
+    width: 2px;
+    height: 100px;
+    background: linear-gradient(
+      to bottom,
+      hsl(var(--primary)),
+      hsl(var(--primary) / 0.5),
+      hsl(var(--primary))
+    );
+    margin: 8px 0;
+    position: relative;
+  }
+  
+  .timeline-line::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: inherit;
+    filter: blur(2px);
+    opacity: 0.6;
+  }
+  
+  .timeline-card {
+    background: linear-gradient(135deg, 
+      hsl(var(--card) / 0.8) 0%, 
+      hsl(var(--card) / 0.6) 50%, 
+      hsl(var(--card) / 0.9) 100%);
+    backdrop-filter: blur(20px);
+    border: 1px solid hsl(var(--primary) / 0.2);
+    border-radius: 1.5rem;
+    padding: 2rem;
+    box-shadow: 
+      0 8px 32px hsl(var(--primary) / 0.1),
+      0 0 0 1px hsl(var(--primary) / 0.05),
+      inset 0 1px 0 hsl(255 255 255 / 0.1);
+    position: relative;
+    overflow: hidden;
+    transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  
+  .timeline-card::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: conic-gradient(
+      transparent,
+      hsl(var(--primary) / 0.05),
+      transparent,
+      hsl(var(--neon-pink) / 0.05),
+      transparent
+    );
+    animation: rotate-glow 15s linear infinite;
+    pointer-events: none;
+  }
+  
+  .timeline-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 
+      0 20px 40px hsl(var(--primary) / 0.2),
+      0 0 0 1px hsl(var(--primary) / 0.1),
+      inset 0 1px 0 hsl(255 255 255 / 0.15);
+  }
+  
   @keyframes card-enter {
     0% {
       opacity: 0;
@@ -603,6 +682,23 @@ All colors MUST be HSL.
     50% {
       background-position: 100% 50%;
       filter: brightness(1.2);
+    }
+  }
+  
+  @keyframes pulse-dot {
+    0%, 100% {
+      transform: scale(1);
+      box-shadow: 
+        0 0 0 4px hsl(var(--background)),
+        0 0 0 6px hsl(var(--primary) / 0.3),
+        0 0 20px hsl(var(--primary) / 0.5);
+    }
+    50% {
+      transform: scale(1.1);
+      box-shadow: 
+        0 0 0 4px hsl(var(--background)),
+        0 0 0 8px hsl(var(--primary) / 0.4),
+        0 0 30px hsl(var(--primary) / 0.7);
     }
   }
 }
