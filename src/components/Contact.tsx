@@ -1,4 +1,4 @@
-import { Mail, MapPin, Phone, Github, Linkedin } from "lucide-react";
+import { Mail, MapPin, Phone, Github, Linkedin, Instagram } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const Contact = () => {
@@ -33,6 +33,11 @@ const Contact = () => {
       icon: Linkedin,
       label: "LinkedIn", 
       href: "https://linkedin.com/in/rushikesh-thokare"
+    },
+    {
+      icon: Instagram,
+      label: "Instagram",
+      href: "https://www.instagram.com/rushikesh.codes?igsh=MTR5Zm1qcWdnanR2Mg=="
     }
   ];
 
