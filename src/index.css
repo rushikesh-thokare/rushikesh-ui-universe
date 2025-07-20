@@ -234,38 +234,175 @@ All colors MUST be HSL.
       transform: rotate(0deg) translateX(100px) rotate(0deg);
   }
   
-  /* About Cards Animation */
-  .about-card {
+  /* Futuristic About Section Animations */
+  
+  /* Particle Effects */
+  .particles-container {
+    pointer-events: none;
+    z-index: 0;
+  }
+  
+  .particle {
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    background: hsl(var(--primary));
+    border-radius: 50%;
+    opacity: 0.6;
+    animation: float-particle 8s linear infinite;
+  }
+  
+  .particle-1 {
+    top: 10%;
+    left: 10%;
+    animation-delay: 0s;
+    animation-duration: 12s;
+  }
+  
+  .particle-2 {
+    top: 20%;
+    right: 15%;
+    animation-delay: 2s;
+    animation-duration: 10s;
+  }
+  
+  .particle-3 {
+    bottom: 30%;
+    left: 20%;
+    animation-delay: 4s;
+    animation-duration: 14s;
+  }
+  
+  .particle-4 {
+    bottom: 15%;
+    right: 25%;
+    animation-delay: 1s;
+    animation-duration: 11s;
+  }
+  
+  .particle-5 {
+    top: 50%;
+    left: 5%;
+    animation-delay: 3s;
+    animation-duration: 13s;
+  }
+  
+  .particle-6 {
+    top: 70%;
+    right: 10%;
+    animation-delay: 5s;
+    animation-duration: 9s;
+  }
+  
+  /* Enhanced Glassmorphism Card */
+  .futuristic-glass-card {
+    background: linear-gradient(135deg, 
+      hsl(var(--card) / 0.7) 0%, 
+      hsl(var(--card) / 0.5) 50%, 
+      hsl(var(--card) / 0.8) 100%);
+    backdrop-filter: blur(20px);
+    border: 1px solid hsl(var(--primary) / 0.2);
+    box-shadow: 
+      0 8px 32px hsl(var(--primary) / 0.1),
+      0 0 0 1px hsl(var(--primary) / 0.05),
+      inset 0 1px 0 hsl(255 255 255 / 0.1);
     position: relative;
-    background: var(--gradient-card);
-    backdrop-filter: blur(10px);
+    overflow: hidden;
+  }
+  
+  .futuristic-glass-card::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: conic-gradient(
+      transparent,
+      hsl(var(--primary) / 0.1),
+      transparent,
+      hsl(var(--neon-pink) / 0.1),
+      transparent
+    );
+    animation: rotate-glow 10s linear infinite;
+    pointer-events: none;
+  }
+  
+  /* Animated Heading */
+  .futuristic-heading {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .gradient-text-animated {
+    background: linear-gradient(
+      45deg,
+      hsl(var(--primary)),
+      hsl(var(--neon-pink)),
+      hsl(var(--neon-blue)),
+      hsl(var(--primary))
+    );
+    background-size: 300% 300%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradient-flow 4s ease-in-out infinite;
+  }
+  
+  .pulsing-underline {
+    background: linear-gradient(90deg, 
+      transparent,
+      hsl(var(--primary)),
+      hsl(var(--neon-pink)),
+      hsl(var(--primary)),
+      transparent
+    );
+    background-size: 200% 100%;
+    animation: pulse-underline 3s ease-in-out infinite;
+    box-shadow: 0 0 10px hsl(var(--primary) / 0.5);
+  }
+  
+  /* Stat Cards */
+  .futuristic-stat-card {
+    position: relative;
+    background: linear-gradient(135deg, 
+      hsl(var(--card) / 0.8) 0%, 
+      hsl(var(--card) / 0.6) 100%);
+    backdrop-filter: blur(15px);
     border: 1px solid hsl(var(--primary) / 0.3);
     border-radius: 1rem;
-    padding: 1.5rem;
+    padding: 2rem 1.5rem;
     text-align: center;
-    box-shadow: 0 0 20px hsl(var(--primary) / 0.1);
-    animation: card-enter 0.6s cubic-bezier(0.16, 1, 0.3, 1) both;
+    box-shadow: 
+      0 0 30px hsl(var(--primary) / 0.1),
+      inset 0 1px 0 hsl(255 255 255 / 0.1);
     transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
     overflow: hidden;
   }
   
-  .about-card::before {
+  .futuristic-stat-card::before {
     content: '';
     position: absolute;
-    inset: -1px;
-    background: linear-gradient(45deg, hsl(var(--primary)), hsl(var(--neon-pink)), hsl(var(--primary)));
-    background-size: 300% 300%;
+    inset: -2px;
+    background: linear-gradient(45deg, 
+      hsl(var(--primary)), 
+      hsl(var(--neon-pink)), 
+      hsl(var(--neon-blue)),
+      hsl(var(--primary)));
+    background-size: 400% 400%;
     border-radius: inherit;
     z-index: -1;
-    animation: glow-pulse 3s ease-in-out infinite;
-    opacity: 0.6;
+    animation: border-glow 6s ease-in-out infinite;
+    opacity: 0.7;
   }
   
-  .about-card-inner {
+  .stat-card-inner {
     position: relative;
     z-index: 1;
-    background: var(--gradient-card);
-    border-radius: calc(1rem - 1px);
+    background: linear-gradient(135deg, 
+      hsl(var(--card) / 0.9) 0%, 
+      hsl(var(--card) / 0.7) 100%);
+    border-radius: calc(1rem - 2px);
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -273,14 +410,85 @@ All colors MUST be HSL.
     align-items: center;
   }
   
-  .about-card:hover {
-    transform: scale(1.05) translateY(-5px);
-    box-shadow: 0 20px 40px hsl(var(--primary) / 0.3);
+  .futuristic-stat-card:hover {
+    transform: scale(1.08) translateY(-8px) rotateX(5deg);
+    box-shadow: 
+      0 25px 50px hsl(var(--primary) / 0.4),
+      0 0 40px hsl(var(--primary) / 0.3);
   }
   
-  .about-card:hover::before {
-    animation: glow-pulse 1.5s ease-in-out infinite, gradient-shift 2s ease-in-out infinite;
-    opacity: 0.9;
+  .futuristic-stat-card:hover::before {
+    animation: border-glow 2s ease-in-out infinite, gradient-shift 3s ease-in-out infinite;
+    opacity: 1;
+  }
+  
+  /* Text Animations */
+  .gradient-text-pulse {
+    background: linear-gradient(
+      45deg,
+      hsl(var(--primary)),
+      hsl(var(--neon-pink)),
+      hsl(var(--neon-blue)),
+      hsl(var(--primary))
+    );
+    background-size: 300% 300%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradient-pulse 3s ease-in-out infinite;
+  }
+  
+  .glow-text {
+    text-shadow: 0 0 10px hsl(var(--primary) / 0.6);
+    transition: text-shadow 0.3s ease;
+  }
+  
+  .glow-text:hover {
+    text-shadow: 0 0 20px hsl(var(--primary) / 0.8);
+  }
+  
+  /* Entrance Animations */
+  .text-reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  
+  .text-reveal.animate-in {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  .fade-slide-in {
+    opacity: 0;
+    transform: translateY(50px) scale(0.95);
+    transition: all 1s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  
+  .fade-slide-in.fade-slide-in {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+  
+  .counter-animate {
+    opacity: 0;
+    transform: translateY(40px) rotateX(90deg);
+    transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  
+  .counter-animate.counter-animate {
+    opacity: 1;
+    transform: translateY(0) rotateX(0deg);
+  }
+  
+  .futuristic-heading.animate-in {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  .parallax-content {
+    transform: translateZ(0);
+    transition: transform 0.1s ease-out;
   }
   
   @keyframes card-enter {
@@ -324,6 +532,77 @@ All colors MUST be HSL.
     }
     100% {
       transform: rotate(-360deg) translateX(80px) rotate(360deg);
+    }
+  }
+  
+  /* New Futuristic Keyframes */
+  @keyframes float-particle {
+    0%, 100% {
+      transform: translateY(0px) translateX(0px) rotate(0deg);
+      opacity: 0.4;
+    }
+    25% {
+      transform: translateY(-20px) translateX(10px) rotate(90deg);
+      opacity: 0.8;
+    }
+    50% {
+      transform: translateY(-10px) translateX(-15px) rotate(180deg);
+      opacity: 0.6;
+    }
+    75% {
+      transform: translateY(-30px) translateX(5px) rotate(270deg);
+      opacity: 0.9;
+    }
+  }
+  
+  @keyframes rotate-glow {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
+  @keyframes gradient-flow {
+    0%, 100% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+  }
+  
+  @keyframes pulse-underline {
+    0%, 100% {
+      background-position: -200% 0;
+      opacity: 0.6;
+    }
+    50% {
+      background-position: 200% 0;
+      opacity: 1;
+    }
+  }
+  
+  @keyframes border-glow {
+    0%, 100% {
+      background-position: 0% 50%;
+      opacity: 0.7;
+    }
+    50% {
+      background-position: 100% 50%;
+      opacity: 1;
+    }
+  }
+  
+  @keyframes gradient-pulse {
+    0%, 100% {
+      background-position: 0% 50%;
+      filter: brightness(1);
+    }
+    50% {
+      background-position: 100% 50%;
+      filter: brightness(1.2);
     }
   }
 }
