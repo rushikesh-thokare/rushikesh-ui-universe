@@ -40,17 +40,15 @@ const Hero = () => {
 
           {/* Right Content - Profile Image */}
           <div className="flex justify-center lg:justify-end">
-            <div className="relative animate-float profile-container flex items-center justify-center">
+            <div className="relative animate-float profile-container">
               {/* Rotating outer ring */}
-              <div className="absolute inset-0 w-96 h-96 flex items-center justify-center">
+              <div className="absolute inset-0 w-96 h-96 -m-8">
                 <div className="absolute inset-0 rounded-full border-2 border-transparent bg-gradient-to-r from-purple-500 via-pink-500 to-purple-500 animate-spin-slow opacity-60"></div>
                 <div className="absolute inset-2 rounded-full bg-background"></div>
               </div>
               
               {/* Pulsing middle ring */}
-              <div className="absolute inset-0 w-96 h-96 flex items-center justify-center">
-                <div className="w-80 h-80 rounded-full border-2 border-purple-500/40 animate-pulse-glow"></div>
-              </div>
+              <div className="absolute -inset-6 rounded-full border-2 border-purple-500/40 animate-pulse-glow"></div>
               
               {/* Main profile image */}
               <div className="relative w-80 h-80 rounded-full overflow-hidden border-4 border-primary/30 hover:scale-105 transition-all duration-500 hover:rotate-3 z-10">
@@ -63,18 +61,14 @@ const Hero = () => {
               </div>
               
               {/* Floating particles */}
-              <div className="absolute inset-0 w-96 h-96 rounded-full flex items-center justify-center">
-                <div className="relative w-80 h-80">
-                  <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 w-2 h-2 bg-purple-400 rounded-full animate-orbit opacity-80"></div>
-                  <div className="absolute top-1/2 -right-8 transform -translate-y-1/2 w-1 h-1 bg-pink-400 rounded-full animate-orbit-reverse opacity-60" style={{ animationDelay: '2s' }}></div>
-                  <div className="absolute -bottom-8 left-1/4 w-1.5 h-1.5 bg-blue-400 rounded-full animate-orbit opacity-70" style={{ animationDelay: '4s' }}></div>
-                </div>
+              <div className="absolute -inset-12 rounded-full">
+                <div className="absolute top-0 left-1/2 w-2 h-2 bg-purple-400 rounded-full animate-orbit opacity-80"></div>
+                <div className="absolute top-1/2 right-0 w-1 h-1 bg-pink-400 rounded-full animate-orbit-reverse opacity-60" style={{ animationDelay: '2s' }}></div>
+                <div className="absolute bottom-0 left-1/4 w-1.5 h-1.5 bg-blue-400 rounded-full animate-orbit opacity-70" style={{ animationDelay: '4s' }}></div>
               </div>
               
               {/* Soft glow effect */}
-              <div className="absolute inset-0 w-96 h-96 flex items-center justify-center">
-                <div className="w-80 h-80 rounded-full bg-gradient-radial from-purple-500/10 via-transparent to-transparent animate-pulse-soft"></div>
-              </div>
+              <div className="absolute inset-0 w-80 h-80 rounded-full bg-gradient-radial from-purple-500/10 via-transparent to-transparent animate-pulse-soft"></div>
             </div>
           </div>
         </div>
