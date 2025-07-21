@@ -37,7 +37,7 @@ const Contact = () => {
     {
       icon: Instagram,
       label: "Instagram",
-      href: "https://www.instagram.com/rushikesh.codes?igsh=MTR5Zm1qcWdnanR2Mg=="
+      href: "https://www.instagram.com/rushi.codes/"
     }
   ];
 
@@ -105,6 +105,18 @@ const Contact = () => {
                     <social.icon className="h-6 w-6 text-muted-foreground hover:text-primary transition-colors" />
                   </a>
                 ))}
+              </div>
+              
+              {/* Instagram QR Code */}
+              <div className="pt-6">
+                <h4 className="text-lg font-semibold text-foreground mb-4">Scan to Follow</h4>
+                <div className="flex justify-center">
+                  <img 
+                    src="/lovable-uploads/38d013cc-9b1c-48a9-82ac-bdcf5ddeb92b.png" 
+                    alt="Instagram QR Code" 
+                    className="w-32 h-32 rounded-lg"
+                  />
+                </div>
               </div>
             </div>
           </div>

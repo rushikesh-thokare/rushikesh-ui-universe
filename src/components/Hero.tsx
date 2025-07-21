@@ -1,6 +1,6 @@
 import { Download } from "lucide-react";
 import { Button } from "@/components/ui/button";
-const profilePhoto = "/lovable-uploads/d05297ad-f47b-41f1-a174-3e592337a989.png";
+const profilePhoto = "/lovable-uploads/e5fd332c-cb2b-4fbf-b2e2-5bc70433c1fd.png";
 
 const Hero = () => {
   return (
