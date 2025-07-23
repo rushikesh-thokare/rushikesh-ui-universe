@@ -1,0 +1,101 @@
+%PDF-1.4
+%âãÏÓ
+1 0 obj
+<<
+/Type /Catalog
+/Pages 2 0 R
+>>
+endobj
+
+2 0 obj
+<<
+/Type /Pages
+/Kids [3 0 R]
+/Count 1
+>>
+endobj
+
+3 0 obj
+<<
+/Type /Page
+/Parent 2 0 R
+/MediaBox [0 0 612 792]
+/Contents 4 0 R
+/Resources <<
+/Font <<
+/F1 5 0 R
+>>
+>>
+>>
+endobj
+
+4 0 obj
+<<
+/Length 500
+>>
+stream
+BT
+/F1 16 Tf
+100 700 Td
+(RUSHIKESH THOKARE) Tj
+0 -30 Td
+/F1 12 Tf
+(BCA Student | UI/UX Designer | Frontend Developer) Tj
+0 -50 Td
+(Email: rushikesh.thokare@example.com) Tj
+0 -20 Td
+(Phone: +91-XXXXXXXXXX) Tj
+0 -20 Td
+(Location: Pune, Maharashtra) Tj
+0 -40 Td
+/F1 14 Tf
+(EDUCATION) Tj
+0 -25 Td
+/F1 11 Tf
+(Bachelor of Computer Applications \(BCA\)) Tj
+0 -15 Td
+(Dr. D.Y. Patil ACS College, Pune) Tj
+0 -15 Td
+(Savitribai Phule Pune University) Tj
+0 -15 Td
+(2022 - 2025 \(Expected\)) Tj
+0 -40 Td
+/F1 14 Tf
+(SKILLS) Tj
+0 -25 Td
+/F1 11 Tf
+(• Frontend: HTML, CSS, JavaScript, React, TypeScript) Tj
+0 -15 Td
+(• Design: Figma, Adobe Photoshop, UI/UX Design) Tj
+0 -15 Td
+(• Frameworks: Tailwind CSS, Bootstrap) Tj
+0 -15 Td
+(• Tools: Git, VS Code, Vite) Tj
+ET
+endstream
+endobj
+
+5 0 obj
+<<
+/Type /Font
+/Subtype /Type1
+/BaseFont /Helvetica
+>>
+endobj
+
+xref
+0 6
+0000000000 65535 f 
+0000000010 00000 n 
+0000000060 00000 n 
+0000000117 00000 n 
+0000000274 00000 n 
+0000000825 00000 n 
+trailer
+<<
+/Size 6
+/Root 1 0 R
+>>
+startxref
+892
+%%EOF

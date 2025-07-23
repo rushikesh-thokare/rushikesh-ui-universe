@@ -76,6 +76,7 @@ const Hero = () => {
               <Button 
                 className="neon-glow hover-glow bg-gradient-neon text-white border-0 px-8 py-3 text-lg font-semibold group"
                 size="lg"
+                onClick={() => document.getElementById('portfolio')?.scrollIntoView({ behavior: 'smooth' })}
               >
                 <Eye className="mr-2 h-5 w-5 group-hover:scale-110 transition-transform" />
                 View Projects
@@ -85,6 +86,7 @@ const Hero = () => {
                 variant="outline"
                 className="border-primary/30 text-primary hover:bg-primary/10 px-8 py-3 text-lg font-semibold group"
                 size="lg"
+                onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
               >
                 <Mail className="mr-2 h-5 w-5 group-hover:scale-110 transition-transform" />
                 Hire Me
@@ -94,6 +96,14 @@ const Hero = () => {
                 variant="secondary"
                 className="bg-secondary/20 text-foreground hover:bg-secondary/30 px-8 py-3 text-lg font-semibold group"
                 size="lg"
+                onClick={() => {
+                  const link = document.createElement('a');
+                  link.href = '/Rushikesh_Thokare_Resume.pdf';
+                  link.download = 'Rushikesh_Thokare_Resume.pdf';
+                  document.body.appendChild(link);
+                  link.click();
+                  document.body.removeChild(link);
+                }}
               >
                 <Download className="mr-2 h-5 w-5 group-hover:scale-110 transition-transform" />
                 Download CV
